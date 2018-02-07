@@ -1,0 +1,4 @@
+1. get or set some favorite URLs for the user
+2. measure 2 hours of time that has passed 
+3. promt the browser to open at one of the set URLs
+4. have a loop to do this
