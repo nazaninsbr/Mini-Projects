@@ -1,0 +1,8 @@
+first we want to get the web page using its url:
+
+	"you need to install it first"
+		pip3 install requests
+
+we will be using something called beautiful soup with you also need to install:
+	
+	pip3 install BeautifulSoup4
