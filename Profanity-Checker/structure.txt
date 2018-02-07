@@ -1,0 +1,5 @@
+1. define the words I want to get errors for
+2. read the file
+3. delete or give errors for those words
+4. replace them
+5. write back to the file
