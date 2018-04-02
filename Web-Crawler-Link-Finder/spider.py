@@ -33,7 +33,7 @@ class Spider:
 	def crawl_page(spiderName, pageUrl):
 		if pageUrl not in Spider.crawled:
 			print(spiderName+ ' now crawling: ' +pageUrl)
-			print('Queue: '+str(len(Spider.queue)) + ' | Crawled: '++str(len(Spider.crawled)))
+			print('Queue: '+str(len(Spider.queue)) + ' | Crawled: '+str(len(Spider.crawled)))
 			Spider.add_links_to_queue(Spider.gather_links(pageUrl))
 			Spider.queue.remove(pageUrl)
 			Spider.crawled.add(pageUrl)
@@ -44,8 +44,10 @@ class Spider:
 		html_string = ''
 		try:
 			response = urlopen(pageUrl)
-			if response.getheader('Content-Type')=='text/html':
+			if 'text/html' in response.getheader('Content-Type'):
 				html_bytes = response.read()
+				print('html bytes')
+				print(html_bytes)
 				html_string = html_bytes.decode('utf-8')
 			finder = LinkFinder(Spider.base_url, pageUrl)
 			finder.feed(html_string)

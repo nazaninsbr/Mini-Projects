@@ -5,14 +5,14 @@ def create_project_dir(directory):
 		print('Creating Project '+ directory)
 		os.makedirs(directory)
 
-	create_data_files(directory, "https://www.youtube.com/watch?v=pjkZCQTfneQ&list=PL6gx4Cwl9DGA8Vys-f48mAH9OKSUyav0q&index=3")
+	#create_data_files(directory, )
 
 
 def create_data_files(project_name, base_url):
 	queue = project_name+'/queue.txt'
 	crawled = project_name+'/crawled.txt'
 
-	if not os.path.isfile(queue):m
+	if not os.path.isfile(queue):
 		write_file(queue, base_url)
 	if not os.path.isfile(crawled):
 		write_file(crawled, '')
@@ -49,8 +49,3 @@ def set_to_file(fileName, setName):
 		add_data_to_file(fileName, link)
 
 
-
-
-
-if __name__ == '__main__':
-	create_project_dir('thenewbostonVideos')
