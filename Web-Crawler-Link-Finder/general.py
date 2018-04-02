@@ -40,8 +40,14 @@ def file_to_set(fileName):
 		for line in f:
 			results.add(line.replace('\n', ''))
 
+	return results
+
 
 def set_to_file(fileName, setName):
+	delete_file_content(fileName)
+	for link in sorted(setName):
+		add_data_to_file(fileName, link)
+
 
 
 
