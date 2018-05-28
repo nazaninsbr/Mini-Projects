@@ -4,5 +4,5 @@ A collection of short projects, you could try and implement these as short proje
 Anyways here are some of the projects on this repository:<br>
 
 <video width="480" height="320" controls="controls">
-  <source src="mini-projects.mov" type="video">
+  <source src="./mini-projects.mov" type="video">
 </video>
